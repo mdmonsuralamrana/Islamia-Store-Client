@@ -4,15 +4,15 @@ import { useParams } from 'react-router';
 const CheckOut = () => {
     const {id} = useParams();
 
-    const [food , setFood] = useState([]);
+    const [product , setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/food/${id}`)
+        fetch(`https://islamia-store.herokuapp.com/product/${id}`)
         .then(res => res.json())
-        .then(data => setFood(data))
+        .then(data => setProduct(data))
     },[id])
 
-    const {name, price} = food;
+    const {name, price} = product;
     
     return (
         <div className="container">

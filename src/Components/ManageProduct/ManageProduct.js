@@ -2,27 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ManageSingleProduct from '../ManageSingleProduct/ManageSingleProduct';
 
-const ManageFood = () => {
+const ManageProduct = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://islamia-store.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
     return (
         <div className="d-flex">
             <div className="col-md-2 bg-dark">
-                <Link to="/manageFood" class="nav-link text-white" href="#">Manage Food</Link>
-                <Link to="/AddProduct" class="nav-link text-white" href="#">Add Food</Link>
+                <Link to="/manageProduct" class="nav-link text-white" href="#">Manage Product</Link>
+                <Link to="/AddProduct" class="nav-link text-white" href="#">Add Product</Link>
             </div>
             <div className="col-md-9">
                 {
-                    products.map(product =><ManageSingleProduct product={product} ></ManageSingleProduct>)
+                    products.map(product =><ManageSingleProduct key={product._id} product={product} ></ManageSingleProduct>)
                 }
             </div>
         </div>
     );
 };
 
-export default ManageFood;
+export default ManageProduct;

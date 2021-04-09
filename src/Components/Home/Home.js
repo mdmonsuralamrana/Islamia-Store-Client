@@ -6,7 +6,7 @@ const Home = () => {
     const [products , setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://islamia-store.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div className="container home mt-5">
             {
-                products.map(product => <Product  product={product}></Product>)
+                products.map(product => <Product key={product._id} product={product}></Product>)
             }
         </div>
     );

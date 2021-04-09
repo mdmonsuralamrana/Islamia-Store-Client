@@ -1,0 +1,45 @@
+.login-email{
+    border: none !important;
+    border-bottom: 1px solid blue !important;
+    font-size: 25px;
+    margin-bottom:30px;
+    margin-left: 26.5%;
+}
+.login-password{
+    border: none !important;
+    border-bottom: 1px solid blue !important;
+    font-size: 25px;
+    margin-bottom:30px;
+    margin-left: 26.5%;
+}
+.btn-warning{
+    width:100%;
+}
+.google-login-btn{
+    width: 50%;
+    margin-left: 25%;
+}
+.fb-login-btn{
+    width: 50%;
+    margin-left: 25%;
+}
+.break-line1{
+    border-bottom:2px solid red !important;
+    width:40%;
+    margin-top: 30px;
+    margin-bottom:-3px;
+    margin-left: 30%;
+}
+.break-line2{
+    border-bottom:2px solid red !important;
+    width:40%;
+    margin-bottom: 30px;
+    margin-top:-10px;
+    margin-left: 30%;
+}
+.text-container{
+    background-color:gray;
+    margin-top:30px;
+    margin-left: 25%;
+    margin-right: 25%;
+}

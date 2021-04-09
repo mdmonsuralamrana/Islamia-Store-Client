@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import './AddProduct.css';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
@@ -11,9 +12,10 @@ const AddProduct = () => {
         const productData = {
             name: data.name,
             price: data.price,
+            weight: data.weight,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addProduct`;
+        const url = `https://islamia-store.herokuapp.com/addProduct`;
         fetch(url , {
             method: 'POST',
             headers: {
@@ -46,13 +48,11 @@ const AddProduct = () => {
             </div>
             <div className="col-md-9">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input name="name" defaultValue="Product Name" ref={register} />
-                    <br/>
-                    <input name="price" defaultValue="Product Price" ref={register} />
-                    <br/>
-                    <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-                    <br/>
-                    <input type="submit" />
+                    <input className="add-product" name="name" type="text" placeholder="Product Name" ref={register} />
+                    <input className="add-product" name="price" placeholder="Product Price" ref={register} />
+                    <input className="add-product" name="weight" placeholder="Product Weight" ref={register} />
+                    <input className="add-product" name="exampleRequired" type="file" onChange={handleImageUpload} />
+                    <input className="submit-btn" type="submit" />
                 </form>
             </div>
         </div>

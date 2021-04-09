@@ -32,7 +32,7 @@ function App() {
           <PrivateRoute path="/orders">
             <Orders></Orders>
           </PrivateRoute>
-          <PrivateRoute path="/check-out/:id"> 
+          <PrivateRoute path="/product/:id"> 
             <CheckOut></CheckOut>
           </PrivateRoute>
           <PrivateRoute path="/admin">
