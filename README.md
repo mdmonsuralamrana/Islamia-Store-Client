@@ -1,8 +1,25 @@
-# Getting Started with Frozen Food Client
+# Islamia Store [Web Application]
 
-# This is a resturent type web application , there i used Mongodb, Express js, React js and Node js.
+## Live site : https://islamia-store.web.app/  
 
-You can useing this applictation please go here https://cranky-wiles-4bf824.netlify.app/
+## server sire : https://github.com/mdmonsuralamrana/Islamia-Store-Server 
 
-Thanks
-# full-stack-client-mdmonsuralamrana
+
+
+### By Using This Site =>
+        customers can buy their product.
+        To order a product they have to log In.
+        If not logged in, they need to log in first.
+        Firebase Authentication system helps them to log in.
+        they can see their orders.
+        And an admin can add products, remove products, etc.
+### Created This Site Using =>
+        Language : Html, CSS, React JS , Node (CRUD) 
+        Database  : MongoDB
+        IDE : Visual Studio Code 
+        Deploy : Firebase, Heroku 
+        Authentication : Firebase 
+
+
+Thanks,
+Md. Monsur Alam Rana
